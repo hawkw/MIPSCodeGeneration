@@ -1,9 +1,8 @@
 #!/usr/bin/env python2.7
 #
-# Tool to convert (simplified) PostScript code to C for use with MARSFont.
+# Code generation tool to generate code for a code generation tool - 
+# converts (simplified) PostScript code to C for use with MARSFont.
 # Quick'n'dirty - may not function as expected, use at own risk, &c &c.
-#
-# requires python 2.7
 #
 # by Hawk Weisman
 # with help from Max Clive 
@@ -16,11 +15,11 @@ from string import Template
 def main():
 
 	capture_letter = re.compile(r"# (.)")
-	capture_postscript = re.compile(r"(?P<identity>\w+)\s*\(\s*(?P<xvalue>-?[0123456789]+)\,\s*(?P<yvalue>-?[0123456789]+)\)")
+	capture_ps = re.compile(r"(?P<identity>\w+)\s*\(\s*(?P<xvalue>-?[0123456789]+)\,\s*(?P<yvalue>-?[0123456789]+)\)")
 
-	action_template = Template('\t.actions[$index] = {.identity = $identity, .x = $xvalue, .y = $yvalue},\n')
-	definition_template = Template('letterform = $letter {\n\t.letter = \'$letter\',\n')
-	num_moves_template = Template('\t.moveCount = $movecount,\n')
+	action = Template('\t.actions[$index] = {.identity = $identity, .x = $xvalue, .y = $yvalue},\n')
+	definition = Template('letterform = $letter {\n\t.letter = \'$letter\',\n')
+	num_moves = Template('\t.moveCount = $movecount,\n')
 
 	# do file io stuff
 	postscript_file = open(sys.argv[1], 'r')
@@ -31,35 +30,50 @@ def main():
 	else:									
 		output_file = open('enums.c', 'w')	# otherwise, use a default
 
-	parsed_statements = []
+	output_file.write("//========= BEGIN PROGRAMMATICALLY-GENERATED CODE =========//\n")
+
+	parsed_lines = []
 	letterform = ''
 
 	for line in postscript_file:
 
 		capt_letter_result = capture_letter.match(line)
-		capt_ps_result = capture_postscript.match(line)
+		capt_ps_result = capture_ps.match(line)
 
 		if capt_letter_result:
 
-			if parsed_statements:
-				output_file.write(definition_template.substitute(letter = letterform))
-				output_file.write(num_moves_template.substitute(movecount = len(parsed_statements) -1))
-				index = 0;
+			if parsed_lines:
+				output_file.write(definition.substitute(letter = letterform))
+				output_file.write(num_moves.substitute(movecount = len(parsed_lines) -1))
+				index = 0
 
-				for parsed_statement in parsed_statements:
-					if parsed_statement:
-						parsed_statement = parsed_statement.groupdict()
-						parsed_statement['identity'] = parsed_statement['identity'].upper()
-						output_file.write(action_template.substitute(parsed_statement, index = index))
-						index = index + 1
+				for parsed in parsed_lines:
+					if parsed:
+						parsed = parsed.groupdict()
+						parsed['identity'] = parsed['identity'].upper()
+						output_file.write(action.substitute(parsed, index = index))
+						index += 1
 
-			output_file.write("}\n")
+			output_file.write("}\n\n")
 
 			letterform = capt_letter_result.group(1)
-			parsed_statements = []
+			parsed_lines = []
 
 		else:
-			parsed_statements.append(capt_ps_result)
+			parsed_lines.append(capt_ps_result)
+
+	output_file.write(definition.substitute(letter = letterform))
+	output_file.write(num_moves.substitute(movecount = len(parsed_lines) -1))
+	index = 0
+
+	for parsed in parsed_lines:
+		if parsed:
+			parsed = parsed.groupdict()
+			parsed['identity'] = parsed['identity'].upper()
+			output_file.write(action.substitute(parsed, index = index))
+			index += 1
+
+	output_file.write("}\n")
 
 	postscript_file.close()
 	output_file.close()
