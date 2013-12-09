@@ -4,9 +4,9 @@
 			.data
 HEADING:	.word	0xffff8010	# set by program
 LEAVETRK:	.word	0xffff8020	# set by program
-WHEREX:	.word	0xffff8030	# read by program
-WHEREY:	.word	0xffff8040	# read by program
-MOVE:	.word	0xffff8050	# set by program
+WHEREX:		.word	0xffff8030	# read by program
+WHEREY:		.word	0xffff8040	# read by program
+MOVE:		.word	0xffff8050	# set by program
 			.text
 			.globl	main
 #======== BEGIN PROGRAMMATICALLY GENERATED CODE ========#
