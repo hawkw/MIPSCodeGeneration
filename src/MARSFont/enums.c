@@ -1,12 +1,3 @@
-#pragma 	once
-#include 	MIPSCodeGen.h
-
-typedef struct letterform {
-	char letter;
-	int moveCount;
-	statement actions[moveCount-1];
-} letter;
-
 
 letterform = setupLineOne {
 	.letter = '',
@@ -288,4 +279,3 @@ letterform = Z {
 	.actions[2] = {.identity = RLINETO, .x = 25, .y = 0},
 	.actions[3] = {.identity = RMOVETO, .x = 5, .y = -50},
 }
-
