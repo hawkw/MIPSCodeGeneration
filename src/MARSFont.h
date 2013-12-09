@@ -1,3 +1,12 @@
+/*
+ * MARSFont.h
+ * Contains definitions for the MARSFont
+ * Some code in this file was generated automatically by a Python script.
+ * (yes, I am that lazy)
+ *
+ * The rest is by Hawk Weisman
+ */
+
 #pragma 	once
 #include 	MIPSCodeGen.h
 
@@ -288,4 +297,6 @@ letterform = Z {
 	.actions[2] = {.identity = RLINETO, .x = 25, .y = 0},
 	.actions[3] = {.identity = RMOVETO, .x = 5, .y = -50},
 }
+
+//========= END PROGRAMMATICALLY-GENERATED CODE =========//
 
