@@ -10,7 +10,7 @@
 # (I am not good with regex)
 #
 
-import sys, subprocess, re
+import sys, re
 from string import Template
 
 def main():
@@ -32,7 +32,7 @@ def main():
 		output_file = open('enums.c', 'w')	# otherwise, use a default
 
 	parsed_statements = []
-	letterform = ' '
+	letterform = ''
 
 	for line in postscript_file:
 
@@ -40,13 +40,18 @@ def main():
 		capt_ps_result = capture_postscript.match(line)
 
 		if capt_letter_result:
+
 			if parsed_statements:
 				output_file.write(definition_template.substitute(letter = letterform))
 				output_file.write(num_moves_template.substitute(movecount = len(parsed_statements) -1))
+				index = 0;
 
 				for parsed_statement in parsed_statements:
 					if parsed_statement:
-						output_file.write(action_template.substitute(parsed_statement.groupdict(), index = parsed_statements.index(parsed_statement)))
+						parsed_statement = parsed_statement.groupdict()
+						parsed_statement['identity'] = parsed_statement['identity'].upper()
+						output_file.write(action_template.substitute(parsed_statement, index = index))
+						index = index + 1
 
 			output_file.write("}\n")
 
