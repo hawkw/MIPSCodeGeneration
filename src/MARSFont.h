@@ -7,14 +7,6 @@ typedef struct letterform {
 	statement actions[moveCount-1];
 } letter;
 
-/* A
-rmoveto (0,50)
-rlineto (25,-50)
-rlineto (25,50)
-rmoveto (-12,-25)
-rlineto (-25,0)
-rmoveto (50,-25)
-*/
 letterform A = {
 	.letter = 'A',
 	.moveCount = 6,
