@@ -32,23 +32,23 @@ typedef enum identity {
 /*
 * Represents a cartesian point with x- and y-coordinates.
 */
-typedef struct orderedPair {
+typedef struct pair {
 	int x;	// the point's x-value
 	int y;	// the point's y-value
-} orderedPair;
+} pair;
 
 /*
  * Represents a PostScript statement with an ordered pair and
  * a statement-identity (moveto, rmoveto, lineto, or rlineto)
  */
 typedef struct statement {
-	orderedPair	pair;
+	pair	pair;
 	identity 	identity;
 } statement;
 
 double toDegrees(double radians);
-int computeHeading(orderedPair current, orderedPair target);
-orderedPair generateNextMove(FILE *dest, statement nextMove, orderedPair currentPosition);
-orderedPair generateOptimizingMove (FILE *dest, statement nextMove, orderedPair currentPosition);
+int computeHeading(pair current, pair target);
+pair generateNextMove(FILE *dest, statement nextMove, pair currentPosition);
+pair generateOptimizingMove (FILE *dest, statement nextMove, pair currentPosition);
 FILE* sourceIO (int argc, char *argv[]);
 FILE* destIO (int argc, char *argv[]);
