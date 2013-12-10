@@ -5,6 +5,9 @@
  * Reads in characters and outputs MIPS code to make a MARSBOT draw
  * those characters. Does not currently support special characters,
  * lowercase characters, or digits (yet).
+ *
+ * see https://github.com/hawkw/MIPSCodeGeneration for documentation,
+ * examples, and latest release versions.
  */
 
 #include 	<stdlib.h>
@@ -43,7 +46,7 @@ int main(int argc, char *argv[]) {
 
 	printf ("textToMIPS.c\nby Hawk Weisman\n\n");
 	printf ("Please enter a string for the MARSBot to write.\n");
-	printf ("Numbers, special characters, and lower-case are currently not supported.\n");
+	printf ("Lower-case, special characters, and punctuation are currently not supported.\n");
 	printf ("Lower-case will be converted to upper-case, all others will be replaced with spaces\n");
 	printf ("Check my GitHub for the latest version - more features are being added literally every day.\n");
 
