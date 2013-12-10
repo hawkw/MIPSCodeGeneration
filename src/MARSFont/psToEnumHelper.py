@@ -21,8 +21,8 @@ def main():
 	capture_letter = re.compile(r"# (.)")
 	capture_ps = re.compile(r"(?P<identity>\w+)\s*\(\s*(?P<xvalue>-?[0123456789]+)\,\s*(?P<yvalue>-?[0123456789]+)\)")
 
-	action = Template('\t.actions[$index] = {.identity = $identity, .x = $xvalue, .y = $yvalue},\n')
-	definition = Template('letterform $letter = {\n\t.letter = \'$letter\',\n')
+	action = Template('\t.actions[$index] = {.identity = $identity, .pair.x = $xvalue, .pair.y = $yvalue},\n')
+	definition = Template('symbol $letter = {\n\t.letter = \'$letter\',\n')
 	num_moves = Template('\t.moveCount = $movecount,\n')
 
 	# do file IO stuff
@@ -39,7 +39,7 @@ def main():
 	output_file.write("//========= BEGIN PROGRAMMATICALLY-GENERATED CODE =========//\n")
 
 	parsed_lines = []
-	letterform = ''
+	symbol = ''
 
 	# loop through the lines in the ps file...
 	for line in postscript_file:
@@ -52,7 +52,7 @@ def main():
 
 			if parsed_lines: #...check to see if we have previously parsed any lines...
 				# ...write the letter name to the file
-				output_file.write(definition.substitute(letter = letterform))
+				output_file.write(definition.substitute(letter = symbol))
 				output_file.write(num_moves.substitute(movecount = len(parsed_lines) -1))
 				index = 0
 
@@ -63,16 +63,16 @@ def main():
 						output_file.write(action.substitute(parsed, index = index))
 						index += 1
 
-			output_file.write("}\n\n") # close the letterform and add a newline
+			output_file.write("}\n\n") # close the symbol and add a newline
 
-			letterform = capt_letter_result.group(1)  # get the next letterform
+			symbol = capt_letter_result.group(1)  # get the next symbol
 			parsed_lines = [] # rinse and repeat
 
 		else:
 			parsed_lines.append(capt_ps_result)
 
 	# repeat the process one more time to write the last letter to the file.
-	output_file.write(definition.substitute(letter = letterform))
+	output_file.write(definition.substitute(letter = symbol))
 	output_file.write(num_moves.substitute(movecount = len(parsed_lines) -1))
 	index = 0
 
