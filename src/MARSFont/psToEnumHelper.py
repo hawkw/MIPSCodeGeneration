@@ -34,7 +34,7 @@ def main():
 	if len(sys.argv) == 3:	# if there's a name for the target file...
 		output_file = open(sys.argv[2], 'w') # ...use that name.
 	else:									
-		output_file = open('enums.c', 'w')	# otherwise, use a default
+		output_file = open('structs.h', 'w')	# otherwise, use a default
 
 	output_file.write("//========= BEGIN PROGRAMMATICALLY-GENERATED CODE =========//\n")
 
