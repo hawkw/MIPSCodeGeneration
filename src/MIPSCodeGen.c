@@ -1,8 +1,11 @@
 #include 	<stdio.h>
 #include 	<stdlib.h>
 #include	<string.h>
+#include 	<math.h>
 
 #include "MIPSCodeGen.h"
+
+#define 	_USE_MATH_DEFINES
 
 FILE* sourceIO (int argc, char *argv[]) {
 
@@ -75,8 +78,8 @@ FILE* destIO (int argc, char *argv[]) {
  * Update as of December 7th, 2013: I've added fully-optimizing codegen functionality to the program. However,
  * I'm maintaining this method in the code, primarily for hystarical raisins.
  */
-orderedPair generateNextMove(FILE *dest, statement nextMove, orderedPair currentPosition) {
-	orderedPair target;
+pair generateNextMove(FILE *dest, statement nextMove, pair currentPosition) {
+	pair target;
 
 	// calculate the x- and y-values for the next move
 	switch (nextMove.identity) {
@@ -141,7 +144,7 @@ double toDegrees(double radians) {
  *
  * Uses the formula theta = arctan2(delta x, delta y)
  */ 
-int computeHeading(orderedPair current, orderedPair target) {
+int computeHeading(pair current, pair target) {
 	int deltaX, deltaY;
 
 	deltaX = current.x - target.x;
@@ -174,8 +177,8 @@ int computeHeading(orderedPair current, orderedPair target) {
  * while compilation should only take place once for a given set of commands, the resulting MIPS 
  * program may be run several times.
  */
-orderedPair generateOptimizingMove (FILE *dest, statement nextMove, orderedPair currentPosition) {
-	orderedPair target;
+pair generateOptimizingMove (FILE *dest, statement nextMove, pair currentPosition) {
+	pair target;
 	int drawLine = 0; 	// assume we are not drawing a line.
 
 	switch (nextMove.identity) { 

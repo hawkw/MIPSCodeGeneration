@@ -1,3 +1,7 @@
+#include 	<stdio.h>
+#include 	<stdlib.h>
+#include	<string.h>
+
 #pragma once
 #define	DEFAULT_OUT	"points.asm"
 
@@ -42,7 +46,7 @@ typedef struct pair {
  * a statement-identity (moveto, rmoveto, lineto, or rlineto)
  */
 typedef struct statement {
-	pair	pair;
+	pair		pair;
 	identity 	identity;
 } statement;
 
