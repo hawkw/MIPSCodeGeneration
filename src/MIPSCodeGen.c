@@ -80,6 +80,7 @@ FILE* destIO (int argc, char *argv[]) {
  */
 pair generateNextMove(FILE *dest, statement nextMove, pair currentPosition) {
 	pair target;
+	//printf ("Codegen: got move order with pair (%d,%d)\n", nextMove.pair.x, nextMove.pair.y);
 
 	// calculate the x- and y-values for the next move
 	switch (nextMove.identity) {
@@ -92,6 +93,8 @@ pair generateNextMove(FILE *dest, statement nextMove, pair currentPosition) {
 		case RLINETO: // current position ordered pair to the move's ordered pair
 			target.x = nextMove.pair.x + currentPosition.x;
 			target.y = nextMove.pair.y + currentPosition.y;
+			//printf ("Codegen: NextMove = (%d,%d), CurrPos = (%d,%d)\n", nextMove.pair.x, nextMove.pair.y, currentPosition.x, currentPosition.y);
+			//printf ("Codegen: made relative move to (%d,%d)\n", target.x, target.y);
 			break;
 		default:	// if the statement is not a move, then just stay at the current position
 			target.x = currentPosition.x;
