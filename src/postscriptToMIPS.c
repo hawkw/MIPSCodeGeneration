@@ -3,7 +3,6 @@
 #include	<string.h>
 #include	"MIPSCodeGen.h"
 
-#define 	_USE_MATH_DEFINES
 #define		LINE_LENGTH 256	
 
 /*
