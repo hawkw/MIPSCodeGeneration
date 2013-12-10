@@ -1,13 +1,17 @@
-MIPSCodeGeneration
-==================
+# MIPSCodeGeneration
+
 ![Image of Nathaniel trapped inside a computer](http://i.imgur.com/azol0t9.png "Image of Nathaniel trapped inside a computer")
 
 Experiments with code generation in C and MIPS. Currently targeting the MARSBot graphics turtle that ships with MARS4.4, may later add code generation for other applications.
 
 Python code ~~may find~~ has found its way into the repo ~~later~~ as well.
 
-How to build and run the project
---------------------------------
+### Dependencies
++ A reasonable C distro (by 'reasonable', I mean that it should have stdlib.h, stdio.h, string.h, and if you're really lucky, math.h and ctype.h)
++ Python 2.7 or later if you want to generate your own fonts and don't like typing
+
+### How to build and run the project
+
 Build object files for the libraries:
 
 ```
@@ -18,7 +22,7 @@ gcc -c MIPSCodeGen.c -o MIPSCodeGen.o
 Build and link the text to MIPS translator:
 
 ```
-gcc -c textToMIPS.c -o textToMIPS.o
+gcc -w -c textToMIPS.c -o textToMIPS.o
 gcc MIPSCodeGen.o MARSFont.o textToMIPS.o -o textToMIPS.out
 ```
 Run with: ```./textToMIPS.out```
