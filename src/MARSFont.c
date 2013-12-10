@@ -7,7 +7,7 @@
  * The rest is by Hawk Weisman
  */
 
-#include "MARSFont.h"
+#include 	"MARSFont.h"
 
 symbol setupLine = {
 	.letter = ' ',
@@ -20,10 +20,6 @@ symbol whitespace = {
 	.moveCount = 1,
 	.actions[0] = {.identity = RMOVETO, .pair.x = 25, .pair.y = 0}
 };
-
-symbol carriageReturn = {
-	
-}
 
 //========= BEGIN PROGRAMMATICALLY-GENERATED CODE =========//
 
@@ -230,12 +226,12 @@ symbol R = {
 symbol S = {
 	.letter = 'S',
 	.moveCount = 7,
-	.actions[0] = {.identity = RMOVETO, .pair.x = 25, .pair.y = 9},
-	.actions[1] = {.identity = RLINETO, .pair.x = -25, .pair.y = 8},
-	.actions[2] = {.identity = RLINETO, .pair.x = 0, .pair.y = 8},
-	.actions[3] = {.identity = RLINETO, .pair.x = 25, .pair.y = 8},
-	.actions[4] = {.identity = RLINETO, .pair.x = 0, .pair.y = 8},
-	.actions[5] = {.identity = RLINETO, .pair.x = -25, .pair.y = 9},
+	.actions[0] = {.identity = RMOVETO, .pair.x = 25, .pair.y = 0},
+	.actions[1] = {.identity = RLINETO, .pair.x = -25, .pair.y = 10},
+	.actions[2] = {.identity = RLINETO, .pair.x = 0, .pair.y = 10},
+	.actions[3] = {.identity = RLINETO, .pair.x = 25, .pair.y = 10},
+	.actions[4] = {.identity = RLINETO, .pair.x = 0, .pair.y = 10},
+	.actions[5] = {.identity = RLINETO, .pair.x = -25, .pair.y = 10},
 	.actions[6] = {.identity = RMOVETO, .pair.x = 30, .pair.y = -50},
 };
 
