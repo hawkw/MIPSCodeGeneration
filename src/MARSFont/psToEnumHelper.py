@@ -22,7 +22,7 @@ def main():
 	capture_ps = re.compile(r"(?P<identity>\w+)\s*\(\s*(?P<xvalue>-?[0123456789]+)\,\s*(?P<yvalue>-?[0123456789]+)\)")
 
 	action = Template('\t.actions[$index] = {.identity = $identity, .x = $xvalue, .y = $yvalue},\n')
-	definition = Template('letterform = $letter {\n\t.letter = \'$letter\',\n')
+	definition = Template('letterform $letter = {\n\t.letter = \'$letter\',\n')
 	num_moves = Template('\t.moveCount = $movecount,\n')
 
 	# do file io stuff
