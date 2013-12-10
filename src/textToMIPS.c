@@ -18,11 +18,15 @@
 
 #define		ROMAN_OFFSET	65
 #define		ARABIC_OFFSET	48
-#define		XDEFAULT		700
+#define		XDEFAULT		680
 #define		DEFAULT_OUT		"words.asm"
 
+statement clearWriteBuffer = {
+	.identity = RMOVETO, .pair.x = 0, .pair.y = 0,
+};
+
 statement goDownALine = {
-	.identity = RMOVETO, .pair.x = 0, .pair.y = 30,
+	.identity = RMOVETO, .pair.x = 0, .pair.y = 50,
 };
 
 statement backToStart = {
@@ -74,6 +78,8 @@ int main(int argc, char *argv[]) {
 	while ((c = getchar()) != endLine) {
 										
 		if (currentPos.x >= XDEFAULT) { // check to see if it's carriage-return time
+			// cruft to insure that the track has been dropped correctly
+			currentPos = generateNextMove(dest, clearWriteBuffer, currentPos);
 			currentPos = generateNextMove(dest, goDownALine, currentPos);
 			backToStart.pair.y = currentPos.y;	// remain on the same line
 			currentPos = generateNextMove(dest, backToStart, currentPos);
