@@ -11,10 +11,10 @@
 #include	"MIPSCodeGen.h"
 
 typedef struct letterform {
-	char letter;
+	int letter;
 	int moveCount;
 	statement actions[7]; 	// chosen by fair dice roll
-} letterform;					// guaranteed to be random
+} letterform;				// guaranteed to be random
 
 
 letterform setupLineOne {
@@ -299,4 +299,6 @@ letterform Z {
 }
 
 //========= END PROGRAMMATICALLY-GENERATED CODE =========//
+
+letterform alphabet[26] = { A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z };
 
