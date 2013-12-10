@@ -1304,8 +1304,8 @@ main:			# Move (5, 5) from the current position
 			lw		$t0,LEAVETRK	# "drop" the track
 			sw		$zero,0($t0)
 
-			# Move (0, -50) from the current position
-			li		$a0,775
+			# Move (5, -50) from the current position
+			li		$a0,780
 			li		$a1,0
 			jal		horiz
 
@@ -1314,7 +1314,7 @@ main:			# Move (5, 5) from the current position
 			jal		vert
 
 			# Draw line (25, 0) from the curent position
-			li		$a0,800
+			li		$a0,805
 			li		$a1,1
 			jal		horiz
 
@@ -1326,7 +1326,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (0, 50) from the curent position
-			li		$a0,800
+			li		$a0,805
 			li		$a1,1
 			jal		horiz
 
@@ -1338,7 +1338,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (-25, 0) from the curent position
-			li		$a0,775
+			li		$a0,780
 			li		$a1,1
 			jal		horiz
 
@@ -1350,7 +1350,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (0, -50) from the curent position
-			li		$a0,775
+			li		$a0,780
 			li		$a1,1
 			jal		horiz
 
@@ -1362,7 +1362,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (30, 0) from the current position
-			li		$a0,805
+			li		$a0,810
 			li		$a1,0
 			jal		horiz
 
@@ -1371,7 +1371,7 @@ main:			# Move (5, 5) from the current position
 			jal		vert
 
 			# Draw line (0, 50) from the curent position
-			li		$a0,805
+			li		$a0,810
 			li		$a1,1
 			jal		horiz
 
@@ -1383,7 +1383,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (0, -50) from the current position
-			li		$a0,805
+			li		$a0,810
 			li		$a1,0
 			jal		horiz
 
@@ -1392,7 +1392,7 @@ main:			# Move (5, 5) from the current position
 			jal		vert
 
 			# Draw line (12, 50) from the curent position
-			li		$a0,817
+			li		$a0,822
 			li		$a1,1
 			jal		horiz
 
@@ -1404,7 +1404,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (12, -50) from the curent position
-			li		$a0,829
+			li		$a0,834
 			li		$a1,1
 			jal		horiz
 
@@ -1416,7 +1416,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (0, 50) from the curent position
-			li		$a0,829
+			li		$a0,834
 			li		$a1,1
 			jal		horiz
 
@@ -1428,7 +1428,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (5, -50) from the current position
-			li		$a0,834
+			li		$a0,839
 			li		$a1,0
 			jal		horiz
 
@@ -1437,7 +1437,7 @@ main:			# Move (5, 5) from the current position
 			jal		vert
 
 			# Draw line (0, 50) from the curent position
-			li		$a0,834
+			li		$a0,839
 			li		$a1,1
 			jal		horiz
 
@@ -1449,7 +1449,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (0, -50) from the current position
-			li		$a0,834
+			li		$a0,839
 			li		$a1,0
 			jal		horiz
 
@@ -1458,7 +1458,7 @@ main:			# Move (5, 5) from the current position
 			jal		vert
 
 			# Draw line (25, 12) from the curent position
-			li		$a0,859
+			li		$a0,864
 			li		$a1,1
 			jal		horiz
 
@@ -1470,7 +1470,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (-25, 12) from the curent position
-			li		$a0,834
+			li		$a0,839
 			li		$a1,1
 			jal		horiz
 
@@ -1482,7 +1482,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (30, -25) from the current position
-			li		$a0,864
+			li		$a0,869
 			li		$a1,0
 			jal		horiz
 
@@ -1491,7 +1491,7 @@ main:			# Move (5, 5) from the current position
 			jal		vert
 
 			# Draw line (0, 35) from the curent position
-			li		$a0,864
+			li		$a0,869
 			li		$a1,1
 			jal		horiz
 
@@ -1503,7 +1503,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (12, 15) from the curent position
-			li		$a0,876
+			li		$a0,881
 			li		$a1,1
 			jal		horiz
 
@@ -1515,7 +1515,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (12, -15) from the curent position
-			li		$a0,888
+			li		$a0,893
 			li		$a1,1
 			jal		horiz
 
@@ -1527,7 +1527,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (0, -35) from the curent position
-			li		$a0,888
+			li		$a0,893
 			li		$a1,1
 			jal		horiz
 
@@ -1539,7 +1539,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (5, 0) from the current position
-			li		$a0,893
+			li		$a0,898
 			li		$a1,0
 			jal		horiz
 
@@ -1548,7 +1548,7 @@ main:			# Move (5, 5) from the current position
 			jal		vert
 
 			# Draw line (25, 0) from the curent position
-			li		$a0,918
+			li		$a0,923
 			li		$a1,1
 			jal		horiz
 
@@ -1560,7 +1560,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (-12, 0) from the current position
-			li		$a0,906
+			li		$a0,911
 			li		$a1,0
 			jal		horiz
 
@@ -1569,7 +1569,7 @@ main:			# Move (5, 5) from the current position
 			jal		vert
 
 			# Draw line (0, 50) from the curent position
-			li		$a0,906
+			li		$a0,911
 			li		$a1,1
 			jal		horiz
 
@@ -1581,7 +1581,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (17, -50) from the current position
-			li		$a0,923
+			li		$a0,928
 			li		$a1,0
 			jal		horiz
 
@@ -1590,7 +1590,7 @@ main:			# Move (5, 5) from the current position
 			jal		vert
 
 			# Draw line (0, 50) from the curent position
-			li		$a0,923
+			li		$a0,928
 			li		$a1,1
 			jal		horiz
 
@@ -1602,7 +1602,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (25, 0) from the curent position
-			li		$a0,948
+			li		$a0,953
 			li		$a1,1
 			jal		horiz
 
@@ -1614,7 +1614,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (-25, -25) from the current position
-			li		$a0,923
+			li		$a0,928
 			li		$a1,0
 			jal		horiz
 
@@ -1623,7 +1623,7 @@ main:			# Move (5, 5) from the current position
 			jal		vert
 
 			# Draw line (25, 0) from the curent position
-			li		$a0,948
+			li		$a0,953
 			li		$a1,1
 			jal		horiz
 
@@ -1635,7 +1635,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (-25, -25) from the current position
-			li		$a0,923
+			li		$a0,928
 			li		$a1,0
 			jal		horiz
 
@@ -1644,7 +1644,7 @@ main:			# Move (5, 5) from the current position
 			jal		vert
 
 			# Draw line (25, 0) from the curent position
-			li		$a0,948
+			li		$a0,953
 			li		$a1,1
 			jal		horiz
 
@@ -1656,7 +1656,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (5, 0) from the current position
-			li		$a0,953
+			li		$a0,958
 			li		$a1,0
 			jal		horiz
 
@@ -1665,7 +1665,7 @@ main:			# Move (5, 5) from the current position
 			jal		vert
 
 			# Draw line (0, 50) from the curent position
-			li		$a0,953
+			li		$a0,958
 			li		$a1,1
 			jal		horiz
 
@@ -1677,7 +1677,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (0, -50) from the current position
-			li		$a0,953
+			li		$a0,958
 			li		$a1,0
 			jal		horiz
 
@@ -1686,7 +1686,7 @@ main:			# Move (5, 5) from the current position
 			jal		vert
 
 			# Draw line (25, 12) from the curent position
-			li		$a0,978
+			li		$a0,983
 			li		$a1,1
 			jal		horiz
 
@@ -1698,7 +1698,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (-25, 12) from the curent position
-			li		$a0,953
+			li		$a0,958
 			li		$a1,1
 			jal		horiz
 
@@ -1710,7 +1710,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (25, 25) from the curent position
-			li		$a0,978
+			li		$a0,983
 			li		$a1,1
 			jal		horiz
 
@@ -1722,7 +1722,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (5, -50) from the current position
-			li		$a0,983
+			li		$a0,988
 			li		$a1,0
 			jal		horiz
 
