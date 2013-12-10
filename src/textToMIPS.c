@@ -8,17 +8,22 @@
  */
 
 #include 	<stdlib.h>
-#include	<sdio.h>
+#include	<stdio.h>
 #include 	<ctype.h>
+#include 	"MIPSCodeGen.h"
 #include 	"MARSFont.h"
 
 #define		OFFSET		65
 #define		DEFAULT_OUT	"words.asm"
 
 int main(int argc, char *argv[]) {
+
+	symbol alphabet[26] = { A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z };
+
 	FILE *dest;		// pointer to output file
 	int c,i;		// character under analysis, iterator
 	pair currentPos;// MARSBot's current position
+	int endLine = '\n';
 
 					// Make the output file...
 	if (argc > 1) { //...either from argv[1]...
@@ -33,27 +38,32 @@ int main(int argc, char *argv[]) {
 		}
 	}
 
-	printf ("Please enter a string for the MARSBot to write.\n
-	        Numbers, special characters, and lower-case are currently not supported.\n
-	        Lower-case will be converted to upper-case, all others will be replaced with spaces\n");
+	printf ("textToMIPS.c\nby Hawk Weisman\n\n");
+	printf ("Please enter a string for the MARSBot to write.\n");
+	printf ("Numbers, special characters, and lower-case are currently not supported.\n");
+	printf ("Lower-case will be converted to upper-case, all others will be replaced with spaces\n");
+	printf ("Check my GitHub for the latest version - more features are being added literally every day.\n");
 
-	fprintf(dest, "# MIPS program automatically generated from a string\n
-	        		# using MARSFont.h by Hawk Weisman");
+	fprintf(dest, "# MIPS program automatically generated from a string\n");
+	fprintf(dest, "# using MARSFont.c by Hawk Weisman\n");
 	fprintf(dest, DATA_SEGMENT);
 	fprintf(dest, WARN_BEGIN);
 	fprintf(dest, "main:");
 
+	currentPos = generateNextMove(dest, setupLineOne.actions[0], currentPos); 
+
 								// code generation takes place	
-	while (c = getchar() != EOL) {
-		c -= OFFSET;
-		if (c > 0) { 
+	while ((c = getchar()) != endLine) {
+		c = toupper(c);			// shift to upper case
+		printf ("C = %d\n",c);
+		c -= OFFSET;			// get the alphabetical position of the letter
+		printf ("C = %d\n",c);
+		if (c >= 0) { 
 			if (c <= 26) { 		// uppercase alphabetic character
-				for (i = 0; i <= alphabet[c].moveCount; i++)
+				for (i = 0; i <= alphabet[c].moveCount; i++) {
 					currentPos = generateNextMove(dest, alphabet[c].actions[i], currentPos); 
-			} else if (c > 32) 	// lowercase alphabetic character
-				c = toupper(c);	// shift case!
-				for (i = 0; i <= alphabet[c].moveCount; i++)
-					currentPos = generateNextMove(dest, alphabet[c].actions[i], currentPos); 
+				}
+			}
 		} else {				// not a letter (could be number, special char, etc)
 								// (handle this later)
 			currentPos = generateNextMove(dest, whitespace.actions[0], currentPos);
