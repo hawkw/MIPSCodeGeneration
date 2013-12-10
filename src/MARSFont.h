@@ -7,23 +7,23 @@
  * The rest is by Hawk Weisman
  */
 
-#pragma 	once
-#include 	MIPSCodeGen.h
+#pragma		once
+#include	"MIPSCodeGen.h"
 
 typedef struct letterform {
 	char letter;
 	int moveCount;
-	statement actions[moveCount-1];
-} letter;
+	statement actions[7]; 	// chosen by fair dice roll
+} letterform;					// guaranteed to be random
 
 
-letterform = setupLineOne {
+letterform setupLineOne {
 	.letter = '',
 	.moveCount = 1,
 	.actions[0] = {.identity = RMOVETO, .x = 5, .y = 5},
-}
+}	
 
-letterform = whitespace {
+letterform whitespace {
 	.letter = ' ',
 	.movecount = 1,
 	.actions[0] = {.identity RMOVETO, .x = 25, .y = 0},
@@ -31,7 +31,7 @@ letterform = whitespace {
 
 //========= BEGIN PROGRAMMATICALLY-GENERATED CODE =========//
 
-letterform = A {
+letterform A {
 	.letter = 'A',
 	.moveCount = 6,
 	.actions[0] = {.identity = RMOVETO, .x = 0, .y = 50},
@@ -42,7 +42,7 @@ letterform = A {
 	.actions[5] = {.identity = RMOVETO, .x = 50, .y = -25},
 }
 
-letterform = B {
+letterform B {
 	.letter = 'B',
 	.moveCount = 7,
 	.actions[0] = {.identity = RLINETO, .x = 0, .y = 50},
@@ -54,7 +54,7 @@ letterform = B {
 	.actions[6] = {.identity = RMOVETO, .x = 25, .y = -50},
 }
 
-letterform = C {
+letterform C {
 	.letter = 'C',
 	.moveCount = 4,
 	.actions[0] = {.identity = RMOVETO, .x = 30, .y = 0},
@@ -63,7 +63,7 @@ letterform = C {
 	.actions[3] = {.identity = RMOVETO, .x = 0, .y = -50},
 }
 
-letterform = D {
+letterform D {
 	.letter = 'D',
 	.moveCount = 6,
 	.actions[0] = {.identity = RMOVETO, .x = 5, .y = 0},
@@ -74,7 +74,7 @@ letterform = D {
 	.actions[5] = {.identity = RMOVETO, .x = 5, .y = 0},
 }
 
-letterform = E {
+letterform E {
 	.letter = 'E',
 	.moveCount = 7,
 	.actions[0] = {.identity = RLINETO, .x = 0, .y = 50},
@@ -86,7 +86,7 @@ letterform = E {
 	.actions[6] = {.identity = RMOVETO, .x = 5, .y = 0},
 }
 
-letterform = F {
+letterform F {
 	.letter = 'F',
 	.moveCount = 6,
 	.actions[0] = {.identity = RLINETO, .x = 0, .y = 50},
@@ -97,7 +97,7 @@ letterform = F {
 	.actions[5] = {.identity = RMOVETO, .x = 5, .y = 0},
 }
 
-letterform = G {
+letterform G {
 	.letter = 'G',
 	.moveCount = 6,
 	.actions[0] = {.identity = RMOVETO, .x = 30, .y = 0},
@@ -108,7 +108,7 @@ letterform = G {
 	.actions[5] = {.identity = RMOVETO, .x = 10, .y = -25},
 }
 
-letterform = H {
+letterform H {
 	.letter = 'H',
 	.moveCount = 6,
 	.actions[0] = {.identity = RLINETO, .x = 0, .y = 50},
@@ -119,7 +119,7 @@ letterform = H {
 	.actions[5] = {.identity = RMOVETO, .x = 5, .y = -50},
 }
 
-letterform = I {
+letterform I {
 	.letter = 'I',
 	.moveCount = 6,
 	.actions[0] = {.identity = RLINETO, .x = 25, .y = 0},
@@ -130,7 +130,7 @@ letterform = I {
 	.actions[5] = {.identity = RMOVETO, .x = 5, .y = -50},
 }
 
-letterform = L {
+letterform L {
 	.letter = 'L',
 	.moveCount = 5,
 	.actions[0] = {.identity = RLINETO, .x = 25, .y = 0},
@@ -140,7 +140,7 @@ letterform = L {
 	.actions[4] = {.identity = RMOVETO, .x = 30, .y = -50},
 }
 
-letterform = K {
+letterform K {
 	.letter = 'K',
 	.moveCount = 6,
 	.actions[0] = {.identity = RLINETO, .x = 0, .y = 50},
@@ -151,7 +151,7 @@ letterform = K {
 	.actions[5] = {.identity = RMOVETO, .x = 5, .y = -50},
 }
 
-letterform = L {
+letterform L {
 	.letter = 'L',
 	.moveCount = 3,
 	.actions[0] = {.identity = RLINETO, .x = 0, .y = 50},
@@ -159,7 +159,7 @@ letterform = L {
 	.actions[2] = {.identity = RMOVETO, .x = 5, .y = -50},
 }
 
-letterform = M {
+letterform M {
 	.letter = 'M',
 	.moveCount = 6,
 	.actions[0] = {.identity = RLINETO, .x = 0, .y = 50},
@@ -170,7 +170,7 @@ letterform = M {
 	.actions[5] = {.identity = RMOVETO, .x = 5, .y = -50},
 }
 
-letterform = N {
+letterform N {
 	.letter = 'N',
 	.moveCount = 5,
 	.actions[0] = {.identity = RLINETO, .x = 0, .y = 50},
@@ -180,7 +180,7 @@ letterform = N {
 	.actions[4] = {.identity = RMOVETO, .x = 5, .y = 0},
 }
 
-letterform = O {
+letterform O {
 	.letter = 'O',
 	.moveCount = 5,
 	.actions[0] = {.identity = RLINETO, .x = 25, .y = 0},
@@ -190,7 +190,7 @@ letterform = O {
 	.actions[4] = {.identity = RMOVETO, .x = 30, .y = 0},
 }
 
-letterform = P {
+letterform P {
 	.letter = 'P',
 	.moveCount = 5,
 	.actions[0] = {.identity = RLINETO, .x = 0, .y = 50},
@@ -200,7 +200,7 @@ letterform = P {
 	.actions[4] = {.identity = RMOVETO, .x = 30, .y = -25},
 }
 
-letterform = Q {
+letterform Q {
 	.letter = 'Q',
 	.moveCount = 7,
 	.actions[0] = {.identity = RLINETO, .x = 25, .y = 0},
@@ -212,7 +212,7 @@ letterform = Q {
 	.actions[6] = {.identity = RMOVETO, .x = 0, .y = -55},
 }
 
-letterform = R {
+letterform R {
 	.letter = 'R',
 	.moveCount = 6,
 	.actions[0] = {.identity = RLINETO, .x = 0, .y = 50},
@@ -223,7 +223,7 @@ letterform = R {
 	.actions[5] = {.identity = RMOVETO, .x = 5, .y = -50},
 }
 
-letterform = S {
+letterform S {
 	.letter = 'S',
 	.moveCount = 5,
 	.actions[0] = {.identity = RMOVETO, .x = 25, .y = 0},
@@ -233,7 +233,7 @@ letterform = S {
 	.actions[4] = {.identity = RMOVETO, .x = 30, .y = -50},
 }
 
-letterform = T {
+letterform T {
 	.letter = 'T',
 	.moveCount = 4,
 	.actions[0] = {.identity = RLINETO, .x = 25, .y = 0},
@@ -242,7 +242,7 @@ letterform = T {
 	.actions[3] = {.identity = RMOVETO, .x = 17, .y = -50},
 }
 
-letterform = U {
+letterform U {
 	.letter = 'U',
 	.moveCount = 5,
 	.actions[0] = {.identity = RLINETO, .x = 0, .y = 35},
@@ -252,7 +252,7 @@ letterform = U {
 	.actions[4] = {.identity = RMOVETO, .x = 5, .y = 0},
 }
 
-letterform = V {
+letterform V {
 	.letter = 'V',
 	.moveCount = 3,
 	.actions[0] = {.identity = RLINETO, .x = 12, .y = 50},
@@ -260,7 +260,7 @@ letterform = V {
 	.actions[2] = {.identity = RMOVETO, .x = 5, .y = 0},
 }
 
-letterform = W {
+letterform W {
 	.letter = 'W',
 	.moveCount = 5,
 	.actions[0] = {.identity = RLINETO, .x = 12, .y = 50},
@@ -270,7 +270,7 @@ letterform = W {
 	.actions[4] = {.identity = RMOVETO, .x = 5, .y = 0},
 }
 
-letterform = X {
+letterform X {
 	.letter = 'X',
 	.moveCount = 4,
 	.actions[0] = {.identity = RLINETO, .x = 25, .y = 50},
@@ -279,7 +279,7 @@ letterform = X {
 	.actions[3] = {.identity = RMOVETO, .x = 5, .y = 0},
 }
 
-letterform = Y {
+letterform Y {
 	.letter = 'Y',
 	.moveCount = 5,
 	.actions[0] = {.identity = RLINETO, .x = 12, .y = 25},
@@ -289,7 +289,7 @@ letterform = Y {
 	.actions[4] = {.identity = RMOVETO, .x = 5, .y = 0},
 }
 
-letterform = Z {
+letterform Z {
 	.letter = 'Z',
 	.moveCount = 3,
 	.actions[0] = {.identity = RLINETO, .x = 25, .y = 0},
