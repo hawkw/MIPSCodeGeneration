@@ -7,7 +7,7 @@ Experiments with code generation in C and MIPS. Currently targeting the MARSBot 
 Python code ~~may find~~ has found its way into the repo ~~later~~ as well.
 
 ### Dependencies
-+ A reasonable C distro (by 'reasonable', I mean that it should have stdlib.h, stdio.h, string.h, and if you're really lucky, math.h and ctype.h)
++ A reasonable gcc distro (by 'reasonable', I mean that it should have stdlib.h, stdio.h, string.h, and if you're really lucky, math.h and ctype.h)
 + Python 2.7 or later if you want to generate your own fonts and don't like typing
 
 ### How to build and run the project
