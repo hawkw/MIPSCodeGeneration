@@ -107,8 +107,8 @@ pair generateNextMove(FILE *dest, statement nextMove, pair currentPosition) {
 	switch (nextMove.identity) {
 	case MOVETO:
 		fprintf(dest, "\t\t\t# Move to (%d, %d)\n", target.x, target.y);
-		fprintf(dest, SET_FORMAT, SET_COORD, target.x, TRACK_BIT,1, DO_X);
-		fprintf(dest, SET_FORMAT, SET_COORD, target.y, TRACK_BIT,1, DO_Y);
+		fprintf(dest, SET_FORMAT, SET_COORD, target.x, TRACK_BIT,0, DO_X);
+		fprintf(dest, SET_FORMAT, SET_COORD, target.y, TRACK_BIT,0, DO_Y);
 		break;
 	case LINETO:
 		fprintf(dest, "\t\t\t# Draw a line to  (%d, %d)\n", target.x, target.y);
