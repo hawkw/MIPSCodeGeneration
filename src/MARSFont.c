@@ -9,7 +9,7 @@
 
 #include "MARSFont.h"
 
-symbol setupLineOne = {
+symbol setupLine = {
 	.letter = ' ',
 	.moveCount = 1,
 	.actions[0] = {.identity = RMOVETO, .pair.x = 5, .pair.y = 5}
@@ -290,4 +290,122 @@ symbol Z = {
 	.actions[3] = {.identity = RMOVETO, .pair.x = 5, .pair.y = -50}
 };
 
-//========= END PROGRAMMATICALLY-GENERATED CODE =========//
+
+symbol num0 = {
+	.letter = '0',
+	.moveCount = 7,
+	.actions[0] = {.identity = RMOVETO, .pair.x = 0, .pair.y = 50},
+	.actions[1] = {.identity = RLINETO, .pair.x = 25, .pair.y = 0},
+	.actions[2] = {.identity = RLINETO, .pair.x = 0, .pair.y = -50},
+	.actions[3] = {.identity = RLINETO, .pair.x = -25, .pair.y = 0},
+	.actions[4] = {.identity = RLINETO, .pair.x = 0, .pair.y = 50},
+	.actions[5] = {.identity = RLINETO, .pair.x = 25, .pair.y = -50},
+	.actions[6] = {.identity = RMOVETO, .pair.x = 5, .pair.y = 0},
+};
+
+symbol num1 = {
+	.letter = '1',
+	.moveCount = 6,
+	.actions[0] = {.identity = RMOVETO, .pair.x = 0, .pair.y = 5},
+	.actions[1] = {.identity = RLINETO, .pair.x = 12, .pair.y = -5},
+	.actions[2] = {.identity = RLINETO, .pair.x = 0, .pair.y = 50},
+	.actions[3] = {.identity = RMOVETO, .pair.x = -12, .pair.y = 0},
+	.actions[4] = {.identity = RLINETO, .pair.x = 25, .pair.y = 0},
+	.actions[5] = {.identity = RMOVETO, .pair.x = 5, .pair.y = -50},
+};
+
+symbol num2 = {
+	.letter = '2',
+	.moveCount = 6,
+	.actions[0] = {.identity = RMOVETO, .pair.x = 0, .pair.y = 5},
+	.actions[1] = {.identity = RLINETO, .pair.x = 5, .pair.y = -5},
+	.actions[2] = {.identity = RLINETO, .pair.x = 25, .pair.y = 0},
+	.actions[3] = {.identity = RLINETO, .pair.x = -25, .pair.y = 50},
+	.actions[4] = {.identity = RLINETO, .pair.x = 25, .pair.y = 0},
+	.actions[5] = {.identity = RMOVETO, .pair.x = 5, .pair.y = -50},
+};
+
+symbol num3 = {
+	.letter = '3',
+	.moveCount = 10,
+	.actions[0] = {.identity = RMOVETO, .pair.x = 0, .pair.y = 5},
+	.actions[1] = {.identity = RLINETO, .pair.x = 5, .pair.y = -5},
+	.actions[2] = {.identity = RLINETO, .pair.x = 20, .pair.y = 0},
+	.actions[3] = {.identity = RLINETO, .pair.x = 0, .pair.y = 25},
+	.actions[4] = {.identity = RLINETO, .pair.x = -25, .pair.y = 0},
+	.actions[5] = {.identity = RMOVETO, .pair.x = 25, .pair.y = 0},
+	.actions[6] = {.identity = RLINETO, .pair.x = 0, .pair.y = 25},
+	.actions[7] = {.identity = RLINETO, .pair.x = -20, .pair.y = 0},
+	.actions[8] = {.identity = RLINETO, .pair.x = -5, .pair.y = -5},
+	.actions[9] = {.identity = RMOVETO, .pair.x = 30, .pair.y = -45},
+};
+
+symbol num4 = {
+	.letter = '4',
+	.moveCount = 6,
+	.actions[0] = {.identity = RMOVETO, .pair.x = 25, .pair.y = 0},
+	.actions[1] = {.identity = RLINETO, .pair.x = 0, .pair.y = 50},
+	.actions[2] = {.identity = RMOVETO, .pair.x = 0, .pair.y = -25},
+	.actions[3] = {.identity = RLINETO, .pair.x = -25, .pair.y = 0},
+	.actions[4] = {.identity = RLINETO, .pair.x = 25, .pair.y = -25},
+	.actions[5] = {.identity = RMOVETO, .pair.x = 5, .pair.y = 0},
+};
+
+symbol num5 = {
+	.letter = '5',
+	.moveCount = 8,
+	.actions[0] = {.identity = RMOVETO, .pair.x = 25, .pair.y = 0},
+	.actions[1] = {.identity = RLINETO, .pair.x = -25, .pair.y = 0},
+	.actions[2] = {.identity = RLINETO, .pair.x = 0, .pair.y = 25},
+	.actions[3] = {.identity = RLINETO, .pair.x = 25, .pair.y = 0},
+	.actions[4] = {.identity = RLINETO, .pair.x = 0, .pair.y = 20},
+	.actions[5] = {.identity = RLINETO, .pair.x = -5, .pair.y = 5},
+	.actions[6] = {.identity = RLINETO, .pair.x = -20, .pair.y = 0},
+	.actions[7] = {.identity = RMOVETO, .pair.x = 30, .pair.y = -50},
+};
+
+symbol num6 = {
+	.letter = '6',
+	.moveCount = 7,
+	.actions[0] = {.identity = RMOVETO, .pair.x = 25, .pair.y = 0},
+	.actions[1] = {.identity = RLINETO, .pair.x = -25, .pair.y = 25},
+	.actions[2] = {.identity = RLINETO, .pair.x = 25, .pair.y = 0},
+	.actions[3] = {.identity = RLINETO, .pair.x = 0, .pair.y = 25},
+	.actions[4] = {.identity = RLINETO, .pair.x = -25, .pair.y = 0},
+	.actions[5] = {.identity = RLINETO, .pair.x = 0, .pair.y = -25},
+	.actions[6] = {.identity = RMOVETO, .pair.x = 30, .pair.y = -25},
+};
+
+symbol num7 = {
+	.letter = '7',
+	.moveCount = 5,
+	.actions[0] = {.identity = RLINETO, .pair.x = 25, .pair.y = 0},
+	.actions[1] = {.identity = RLINETO, .pair.x = -25, .pair.y = 50},
+	.actions[2] = {.identity = RMOVETO, .pair.x = 5, .pair.y = -25},
+	.actions[3] = {.identity = RLINETO, .pair.x = 12, .pair.y = 0},
+	.actions[4] = {.identity = RMOVETO, .pair.x = 12, .pair.y = -25},
+};
+
+symbol num8 = {
+	.letter = '8',
+	.moveCount = 7,
+	.actions[0] = {.identity = RLINETO, .pair.x = 25, .pair.y = 0},
+	.actions[1] = {.identity = RLINETO, .pair.x = 0, .pair.y = 50},
+	.actions[2] = {.identity = RLINETO, .pair.x = -25, .pair.y = 0},
+	.actions[3] = {.identity = RLINETO, .pair.x = 0, .pair.y = -50},
+	.actions[4] = {.identity = RMOVETO, .pair.x = 0, .pair.y = 25},
+	.actions[5] = {.identity = RLINETO, .pair.x = 25, .pair.y = 0},
+	.actions[6] = {.identity = RMOVETO, .pair.x = 5, .pair.y = -25},
+};
+
+symbol num9 = {
+	.letter = '9',
+	.moveCount = 6,
+	.actions[0] = {.identity = RLINETO, .pair.x = 25, .pair.y = 0},
+	.actions[1] = {.identity = RLINETO, .pair.x = 0, .pair.y = 25},
+	.actions[2] = {.identity = RLINETO, .pair.x = -25, .pair.y = 0},
+	.actions[3] = {.identity = RLINETO, .pair.x = 0, .pair.y = -25},
+	.actions[4] = {.identity = RMOVETO, .pair.x = 25, .pair.y = 25},
+	.actions[5] = {.identity = RLINETO, .pair.x = -25, .pair.y = 25},
+	.actions[6] = {.identity = RMOVETO, .pair.x = 30, .pair.y = -50},
+};
