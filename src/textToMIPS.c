@@ -55,9 +55,7 @@ int main(int argc, char *argv[]) {
 								// code generation takes place	
 	while ((c = getchar()) != endLine) {
 		c = toupper(c);			// shift to upper case
-		printf ("C = %d\n",c);
 		c -= OFFSET;			// get the alphabetical position of the letter
-		printf ("C = %d\n",c);
 		if (c >= 0) { 
 			if (c <= 26) { 		// uppercase alphabetic character
 				for (i = 0; i <= alphabet[c].moveCount; i++) {
