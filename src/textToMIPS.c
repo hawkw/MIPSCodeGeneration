@@ -18,8 +18,16 @@
 
 #define		ROMAN_OFFSET	65
 #define		ARABIC_OFFSET	48
-#define		WINDOWDEFAULT	718
+#define		XDEFAULT		700
 #define		DEFAULT_OUT		"words.asm"
+
+statement goDownALine = {
+	.identity = RMOVETO, .pair.x = 0, .pair.y = 30,
+};
+
+statement backToStart = {
+	.identity = MOVETO, .pair.x = 0, .pair.y = 0,
+};
 
 int main(int argc, char *argv[]) {
 
@@ -64,6 +72,12 @@ int main(int argc, char *argv[]) {
 
 										// code generation takes place	
 	while ((c = getchar()) != endLine) {
+										
+		if (currentPos.x >= XDEFAULT) { // check to see if it's carriage-return time
+			currentPos = generateNextMove(dest, goDownALine, currentPos);
+			backToStart.pair.y = currentPos.y;	// remain on the same line
+			currentPos = generateNextMove(dest, backToStart, currentPos);
+		}
 
 		if (c >= 65 && c <= 122) { 		// alphabetic (roman) character
 			if (c >= 65 && c <= 90 ) {	// uppercase roman
