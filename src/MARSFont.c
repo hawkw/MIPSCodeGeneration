@@ -52,7 +52,7 @@ symbol C = {
 	.actions[0] = {.identity = RMOVETO, .pair.x = 30, .pair.y = 0},
 	.actions[1] = {.identity = RLINETO, .pair.x = -25, .pair.y = 25},
 	.actions[2] = {.identity = RLINETO, .pair.x = 25, .pair.y = 25},
-	.actions[3] = {.identity = RMOVETO, .pair.x = 0, .pair.y = -50}
+	.actions[3] = {.identity = RMOVETO, .pair.x = 5, .pair.y = -50}
 };
 
 symbol D = {
