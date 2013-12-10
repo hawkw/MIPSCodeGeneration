@@ -35,3 +35,9 @@ gcc MIPSCodeGen.o postscriptToMIPS.o -o postscriptToMIPS.out
 
 Run with: ```./postscriptToMIPS.out <path-to-input-file> <path-to-output-file (optional)>```
 
+### Using MARSFont to write your own fonts
+```c
+// this part isn't done yet
+// TODO: finish this part
+```
+
