@@ -25,7 +25,7 @@ def main():
 	definition = Template('letterform $letter = {\n\t.letter = \'$letter\',\n')
 	num_moves = Template('\t.moveCount = $movecount,\n')
 
-	# do file io stuff
+	# do file IO stuff
 	postscript_file = open(sys.argv[1], 'r')
 	print "Opened " + sys.argv[1] + " as postscript_file"
 
