@@ -13,12 +13,14 @@
 #include 	"MIPSCodeGen.h"
 #include 	"MARSFont.h"
 
-#define		OFFSET		65
-#define		DEFAULT_OUT	"words.asm"
+#define		ROMAN_OFFSET	65
+#define		ARABIC_OFFSET	48
+#define		DEFAULT_OUT		"words.asm"
 
 int main(int argc, char *argv[]) {
 
 	symbol alphabet[26] = { A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z };
+	symbol arabics[10] = { num0, num1, num2, num3, num4, num5, num6, num7, num8, num9 };
 
 	FILE *dest;		// pointer to output file
 	int c,i;		// character under analysis, iterator
@@ -50,21 +52,42 @@ int main(int argc, char *argv[]) {
 	fprintf(dest, WARN_BEGIN);
 	fprintf(dest, "main:");
 
-	currentPos = generateNextMove(dest, setupLineOne.actions[0], currentPos); 
+	// MARSBot starts at origin.
+	currentPos.x = 0;
+	currentPos.y = 0;
 
-								// code generation takes place	
+	currentPos = generateNextMove(dest, setupLine.actions[0], currentPos); 
+
+										// code generation takes place	
 	while ((c = getchar()) != endLine) {
-		c = toupper(c);			// shift to upper case
-		c -= OFFSET;			// get the alphabetical position of the letter
-		if (c >= 0) { 
-			if (c <= 26) { 		// uppercase alphabetic character
+
+		if (c >= 65 && c <= 122) { 		// alphabetic (roman) character
+			if (c >= 65 && c <= 90 ) {	// uppercase roman
+				c -= ROMAN_OFFSET;		// offset to get alphabetic position
 				for (i = 0; i <= alphabet[c].moveCount; i++) {
 					currentPos = generateNextMove(dest, alphabet[c].actions[i], currentPos); 
 				}
+			} else if (c >= 97 && c <= 122) {
+				c = toupper(c);			// shift to upper case
+				c -= ROMAN_OFFSET;		// get the alphabet position of the letter
+				for (i = 0; i <= alphabet[c].moveCount; i++) {
+					currentPos = generateNextMove(dest, alphabet[c].actions[i], currentPos); 
+				}
+			} else { 						// handle special chars later
+				currentPos = generateNextMove(dest, whitespace.actions[0], currentPos);
 			}
-		} else {				// not a letter (could be number, special char, etc)
-								// (handle this later)
-			currentPos = generateNextMove(dest, whitespace.actions[0], currentPos);
+		} else {							// not a letter (could be number, special char, etc)
+			if ( c >= 48 && c <= 57 ) {		// numeric (arabic) character
+				c -= ARABIC_OFFSET;			// offset to determine numeric identity
+				//printf ("doing arabic %d, arabics[%d]\n", c, arabics[c].letter);
+				for (i = 0; i <= arabics[c].moveCount; i++) {
+					currentPos = generateNextMove(dest, arabics[c].actions[i], currentPos);
+					//printf ("on arabic %d, move %d: (%d,%d)\n", c, i, arabics[c].actions[i].pair.x, arabics[c].actions[i].pair.y);
+					}
+											// otherwise, assume we're a space
+			} else { 						// handle special chars later
+				currentPos = generateNextMove(dest, whitespace.actions[0], currentPos);
+			}
 		}
 	}
 
