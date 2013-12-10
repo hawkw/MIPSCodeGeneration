@@ -42,6 +42,7 @@ extern symbol Z;
 
 extern symbol setupLine;
 extern symbol whitespace;
+extern symbol carriageReturn;
 
 extern symbol num0;
 extern symbol num1;

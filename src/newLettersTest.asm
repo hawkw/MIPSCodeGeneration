@@ -29,8 +29,8 @@ main:			# Move (5, 5) from the current position
 			li		$a1,0
 			jal		vert
 
-			# Draw line (25, -50) from the curent position
-			li		$a0,30
+			# Draw line (12, -50) from the curent position
+			li		$a0,17
 			li		$a1,1
 			jal		horiz
 
@@ -41,8 +41,8 @@ main:			# Move (5, 5) from the current position
 			lw		$t0,LEAVETRK	# "drop" the track
 			sw		$zero,0($t0)
 
-			# Draw line (25, 50) from the curent position
-			li		$a0,55
+			# Draw line (12, 50) from the curent position
+			li		$a0,29
 			li		$a1,1
 			jal		horiz
 
@@ -53,8 +53,8 @@ main:			# Move (5, 5) from the current position
 			lw		$t0,LEAVETRK	# "drop" the track
 			sw		$zero,0($t0)
 
-			# Move (-12, -25) from the current position
-			li		$a0,43
+			# Move (-6, -25) from the current position
+			li		$a0,23
 			li		$a1,0
 			jal		horiz
 
@@ -62,8 +62,8 @@ main:			# Move (5, 5) from the current position
 			li		$a1,0
 			jal		vert
 
-			# Draw line (-25, 0) from the curent position
-			li		$a0,18
+			# Draw line (-12, 0) from the curent position
+			li		$a0,11
 			li		$a1,1
 			jal		horiz
 
@@ -74,8 +74,8 @@ main:			# Move (5, 5) from the current position
 			lw		$t0,LEAVETRK	# "drop" the track
 			sw		$zero,0($t0)
 
-			# Move (50, -25) from the current position
-			li		$a0,68
+			# Move (25, -25) from the current position
+			li		$a0,36
 			li		$a1,0
 			jal		horiz
 
@@ -84,7 +84,7 @@ main:			# Move (5, 5) from the current position
 			jal		vert
 
 			# Draw line (0, 50) from the curent position
-			li		$a0,68
+			li		$a0,36
 			li		$a1,1
 			jal		horiz
 
@@ -96,7 +96,7 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (0, -50) from the current position
-			li		$a0,68
+			li		$a0,36
 			li		$a1,0
 			jal		horiz
 
@@ -104,12 +104,12 @@ main:			# Move (5, 5) from the current position
 			li		$a1,0
 			jal		vert
 
-			# Draw line (25, 8) from the curent position
-			li		$a0,93
+			# Draw line (25, 9) from the curent position
+			li		$a0,61
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,13
+			li		$a0,14
 			li		$a1,1
 			jal		vert
 
@@ -117,11 +117,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (0, 8) from the curent position
-			li		$a0,93
+			li		$a0,61
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,21
+			li		$a0,22
 			li		$a1,1
 			jal		vert
 
@@ -129,11 +129,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (-25, 8) from the curent position
-			li		$a0,68
+			li		$a0,36
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,29
+			li		$a0,30
 			li		$a1,1
 			jal		vert
 
@@ -141,11 +141,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (25, 8) from the curent position
-			li		$a0,93
+			li		$a0,61
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,37
+			li		$a0,38
 			li		$a1,1
 			jal		vert
 
@@ -153,23 +153,23 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (0, 8) from the curent position
-			li		$a0,93
+			li		$a0,61
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,45
+			li		$a0,46
 			li		$a1,1
 			jal		vert
 
 			lw		$t0,LEAVETRK	# "drop" the track
 			sw		$zero,0($t0)
 
-			# Draw line (-25, 8) from the curent position
-			li		$a0,68
+			# Draw line (-25, 9) from the curent position
+			li		$a0,36
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,53
+			li		$a0,55
 			li		$a1,1
 			jal		vert
 
@@ -177,29 +177,29 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (30, -50) from the current position
-			li		$a0,98
+			li		$a0,66
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,3
+			li		$a0,5
 			li		$a1,0
 			jal		vert
 
 			# Move (30, 0) from the current position
-			li		$a0,128
+			li		$a0,96
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,3
+			li		$a0,5
 			li		$a1,0
 			jal		vert
 
-			# Draw line (-20, 12) from the curent position
-			li		$a0,108
+			# Draw line (-20, 13) from the curent position
+			li		$a0,76
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,15
+			li		$a0,18
 			li		$a1,1
 			jal		vert
 
@@ -207,11 +207,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (-5, 12) from the curent position
-			li		$a0,103
+			li		$a0,71
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,27
+			li		$a0,30
 			li		$a1,1
 			jal		vert
 
@@ -219,23 +219,23 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (5, 12) from the curent position
-			li		$a0,108
+			li		$a0,76
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,39
+			li		$a0,42
 			li		$a1,1
 			jal		vert
 
 			lw		$t0,LEAVETRK	# "drop" the track
 			sw		$zero,0($t0)
 
-			# Draw line (20, 12) from the curent position
-			li		$a0,128
+			# Draw line (20, 13) from the curent position
+			li		$a0,96
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,51
+			li		$a0,55
 			li		$a1,1
 			jal		vert
 
@@ -243,41 +243,41 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (0, -50) from the current position
-			li		$a0,128
+			li		$a0,96
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,1
+			li		$a0,5
 			li		$a1,0
 			jal		vert
 
 			# Move (5, 0) from the current position
-			li		$a0,133
+			li		$a0,101
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,1
+			li		$a0,5
 			li		$a1,0
 			jal		vert
 
 			# Draw line (0, 50) from the curent position
-			li		$a0,133
+			li		$a0,101
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,51
+			li		$a0,55
 			li		$a1,1
 			jal		vert
 
 			lw		$t0,LEAVETRK	# "drop" the track
 			sw		$zero,0($t0)
 
-			# Draw line (20, -12) from the curent position
-			li		$a0,153
+			# Draw line (20, -13) from the curent position
+			li		$a0,121
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,39
+			li		$a0,42
 			li		$a1,1
 			jal		vert
 
@@ -285,11 +285,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (5, -12) from the curent position
-			li		$a0,158
+			li		$a0,126
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,27
+			li		$a0,30
 			li		$a1,1
 			jal		vert
 
@@ -297,787 +297,19 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (-5, -12) from the curent position
-			li		$a0,153
+			li		$a0,121
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,15
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (-20, -12) from the curent position
-			li		$a0,133
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,3
+			li		$a0,18
 			li		$a1,1
 			jal		vert
 
 			lw		$t0,LEAVETRK	# "drop" the track
 			sw		$zero,0($t0)
 
-			# Move (25, 0) from the current position
-			li		$a0,158
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Move (5, 0) from the current position
-			li		$a0,163
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Draw line (0, 50) from the curent position
-			li		$a0,163
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (25, 0) from the curent position
-			li		$a0,188
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (-25, -25) from the current position
-			li		$a0,163
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,28
-			li		$a1,0
-			jal		vert
-
-			# Draw line (25, 0) from the curent position
-			li		$a0,188
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,28
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (-25, -25) from the current position
-			li		$a0,163
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Draw line (25, 0) from the curent position
-			li		$a0,188
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (5, 0) from the current position
-			li		$a0,193
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Draw line (0, 50) from the curent position
-			li		$a0,193
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (0, -25) from the current position
-			li		$a0,193
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,28
-			li		$a1,0
-			jal		vert
-
-			# Draw line (25, 0) from the curent position
-			li		$a0,218
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,28
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (-25, -25) from the current position
-			li		$a0,193
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Draw line (25, 0) from the curent position
-			li		$a0,218
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (5, 0) from the current position
-			li		$a0,223
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Move (30, 0) from the current position
-			li		$a0,253
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Draw line (-25, 25) from the curent position
-			li		$a0,228
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,28
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (25, 25) from the curent position
-			li		$a0,253
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (0, -25) from the curent position
-			li		$a0,253
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,28
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (-5, 0) from the curent position
-			li		$a0,248
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,28
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (10, -25) from the current position
-			li		$a0,258
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Draw line (0, 50) from the curent position
-			li		$a0,258
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (0, -25) from the current position
-			li		$a0,258
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,28
-			li		$a1,0
-			jal		vert
-
-			# Draw line (25, 0) from the curent position
-			li		$a0,283
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,28
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (0, -25) from the current position
-			li		$a0,283
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Draw line (0, 50) from the curent position
-			li		$a0,283
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (5, -50) from the current position
-			li		$a0,288
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Draw line (25, 0) from the curent position
-			li		$a0,313
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (-12, 0) from the current position
-			li		$a0,301
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Draw line (0, 50) from the curent position
-			li		$a0,301
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (-12, 0) from the current position
-			li		$a0,289
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,0
-			jal		vert
-
-			# Draw line (25, 0) from the curent position
-			li		$a0,314
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (5, -50) from the current position
-			li		$a0,319
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Draw line (25, 0) from the curent position
-			li		$a0,344
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (0, 25) from the curent position
-			li		$a0,344
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,28
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (-12, 25) from the curent position
-			li		$a0,332
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (-12, 0) from the curent position
-			li		$a0,320
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (30, -50) from the current position
-			li		$a0,350
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Draw line (0, 50) from the curent position
-			li		$a0,350
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (0, -25) from the current position
-			li		$a0,350
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,28
-			li		$a1,0
-			jal		vert
-
-			# Draw line (25, -25) from the curent position
-			li		$a0,375
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (-25, 25) from the current position
-			li		$a0,350
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,28
-			li		$a1,0
-			jal		vert
-
-			# Draw line (25, 25) from the curent position
-			li		$a0,375
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (5, -50) from the current position
-			li		$a0,380
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Draw line (0, 50) from the curent position
-			li		$a0,380
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (25, 0) from the curent position
-			li		$a0,405
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (5, -50) from the current position
-			li		$a0,410
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Draw line (0, 50) from the curent position
-			li		$a0,410
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (0, -50) from the current position
-			li		$a0,410
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Draw line (12, 50) from the curent position
-			li		$a0,422
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (12, -50) from the curent position
-			li		$a0,434
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (0, 50) from the curent position
-			li		$a0,434
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,53
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (5, -50) from the current position
-			li		$a0,439
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,0
-			jal		vert
-
-			# Draw line (0, 40) from the curent position
-			li		$a0,439
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,43
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (0, -50) from the current position
-			li		$a0,439
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,-7
-			li		$a1,0
-			jal		vert
-
-			# Draw line (25, 50) from the curent position
-			li		$a0,464
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,43
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (0, -50) from the curent position
-			li		$a0,464
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,-7
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (5, 0) from the current position
-			li		$a0,469
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,-7
-			li		$a1,0
-			jal		vert
-
-			# Move (5, 0) from the current position
-			li		$a0,474
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,-7
-			li		$a1,0
-			jal		vert
-
-			# Draw line (-5, 5) from the curent position
-			li		$a0,469
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,-2
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (15, 0) from the curent position
-			li		$a0,484
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,-2
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (5, 5) from the curent position
-			li		$a0,489
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,3
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (0, 40) from the curent position
-			li		$a0,489
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,43
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (5, -5) from the curent position
-			li		$a0,494
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,38
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (-15, 0) from the curent position
-			li		$a0,479
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,38
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (5, -5) from the curent position
-			li		$a0,484
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,33
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (0, -40) from the curent position
-			li		$a0,484
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,-7
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (30, 0) from the current position
-			li		$a0,514
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,-7
-			li		$a1,0
-			jal		vert
-
-			# Draw line (0, 50) from the curent position
-			li		$a0,514
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,43
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (0, -50) from the current position
-			li		$a0,514
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,-7
-			li		$a1,0
-			jal		vert
-
-			# Draw line (25, 12) from the curent position
-			li		$a0,539
+			# Draw line (-20, -13) from the curent position
+			li		$a0,101
 			li		$a1,1
 			jal		horiz
 
@@ -1088,8 +320,731 @@ main:			# Move (5, 5) from the current position
 			lw		$t0,LEAVETRK	# "drop" the track
 			sw		$zero,0($t0)
 
-			# Draw line (-25, 12) from the curent position
-			li		$a0,514
+			# Move (25, 0) from the current position
+			li		$a0,126
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Move (5, 0) from the current position
+			li		$a0,131
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (0, 50) from the curent position
+			li		$a0,131
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (25, 0) from the curent position
+			li		$a0,156
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (-25, -25) from the current position
+			li		$a0,131
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,30
+			li		$a1,0
+			jal		vert
+
+			# Draw line (25, 0) from the curent position
+			li		$a0,156
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,30
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (-25, -25) from the current position
+			li		$a0,131
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (25, 0) from the curent position
+			li		$a0,156
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (5, 0) from the current position
+			li		$a0,161
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (0, 50) from the curent position
+			li		$a0,161
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (0, -25) from the current position
+			li		$a0,161
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,30
+			li		$a1,0
+			jal		vert
+
+			# Draw line (25, 0) from the curent position
+			li		$a0,186
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,30
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (-25, -25) from the current position
+			li		$a0,161
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (25, 0) from the curent position
+			li		$a0,186
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (5, 0) from the current position
+			li		$a0,191
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Move (30, 0) from the current position
+			li		$a0,221
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (-20, 13) from the curent position
+			li		$a0,201
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,18
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (-5, 12) from the curent position
+			li		$a0,196
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,30
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (5, 12) from the curent position
+			li		$a0,201
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,42
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (20, 13) from the curent position
+			li		$a0,221
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (0, -25) from the curent position
+			li		$a0,221
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,30
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (-5, 0) from the curent position
+			li		$a0,216
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,30
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (10, -25) from the current position
+			li		$a0,226
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (0, 50) from the curent position
+			li		$a0,226
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (0, -25) from the current position
+			li		$a0,226
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,30
+			li		$a1,0
+			jal		vert
+
+			# Draw line (25, 0) from the curent position
+			li		$a0,251
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,30
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (0, -25) from the current position
+			li		$a0,251
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (0, 50) from the curent position
+			li		$a0,251
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (5, -50) from the current position
+			li		$a0,256
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (25, 0) from the curent position
+			li		$a0,281
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (-12, 0) from the current position
+			li		$a0,269
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (0, 50) from the curent position
+			li		$a0,269
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (-12, 0) from the current position
+			li		$a0,257
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,0
+			jal		vert
+
+			# Draw line (25, 0) from the curent position
+			li		$a0,282
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (5, -50) from the current position
+			li		$a0,287
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (25, 0) from the curent position
+			li		$a0,312
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (0, 25) from the curent position
+			li		$a0,312
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,30
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (-12, 25) from the curent position
+			li		$a0,300
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (-12, 0) from the curent position
+			li		$a0,288
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (30, -50) from the current position
+			li		$a0,318
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (0, 50) from the curent position
+			li		$a0,318
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (0, -25) from the current position
+			li		$a0,318
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,30
+			li		$a1,0
+			jal		vert
+
+			# Draw line (25, -25) from the curent position
+			li		$a0,343
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (-25, 25) from the current position
+			li		$a0,318
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,30
+			li		$a1,0
+			jal		vert
+
+			# Draw line (25, 25) from the curent position
+			li		$a0,343
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (5, -50) from the current position
+			li		$a0,348
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (0, 50) from the curent position
+			li		$a0,348
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (25, 0) from the curent position
+			li		$a0,373
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (5, -50) from the current position
+			li		$a0,378
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (0, 50) from the curent position
+			li		$a0,378
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (0, -50) from the current position
+			li		$a0,378
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (12, 50) from the curent position
+			li		$a0,390
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (12, -50) from the curent position
+			li		$a0,402
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (0, 50) from the curent position
+			li		$a0,402
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (5, -50) from the current position
+			li		$a0,407
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (0, 50) from the curent position
+			li		$a0,407
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (0, -50) from the current position
+			li		$a0,407
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (25, 50) from the curent position
+			li		$a0,432
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (0, -50) from the curent position
+			li		$a0,432
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (5, 0) from the current position
+			li		$a0,437
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (25, 0) from the curent position
+			li		$a0,462
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (0, 50) from the curent position
+			li		$a0,462
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (-25, 0) from the curent position
+			li		$a0,437
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (0, -50) from the curent position
+			li		$a0,437
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (30, 0) from the current position
+			li		$a0,467
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (0, 50) from the curent position
+			li		$a0,467
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,55
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (0, -50) from the current position
+			li		$a0,467
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,5
+			li		$a1,0
+			jal		vert
+
+			# Draw line (25, 12) from the curent position
+			li		$a0,492
 			li		$a1,1
 			jal		horiz
 
@@ -1100,116 +1055,29 @@ main:			# Move (5, 5) from the current position
 			lw		$t0,LEAVETRK	# "drop" the track
 			sw		$zero,0($t0)
 
+			# Draw line (-25, 12) from the curent position
+			li		$a0,467
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,29
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
 			# Move (30, -25) from the current position
-			li		$a0,544
+			li		$a0,497
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,-8
+			li		$a0,4
 			li		$a1,0
 			jal		vert
 
 			# Draw line (25, 0) from the curent position
-			li		$a0,569
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,-8
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (0, 50) from the curent position
-			li		$a0,569
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,42
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (-25, 0) from the curent position
-			li		$a0,544
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,42
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Draw line (0, -50) from the curent position
-			li		$a0,544
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,-8
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (20, 45) from the current position
-			li		$a0,564
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,37
-			li		$a1,0
-			jal		vert
-
-			# Draw line (10, 10) from the curent position
-			li		$a0,574
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,47
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (0, -55) from the current position
-			li		$a0,574
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,-8
-			li		$a1,0
-			jal		vert
-
-			# Draw line (0, 50) from the curent position
-			li		$a0,574
-			li		$a1,1
-			jal		horiz
-
-			li		$a0,42
-			li		$a1,1
-			jal		vert
-
-			lw		$t0,LEAVETRK	# "drop" the track
-			sw		$zero,0($t0)
-
-			# Move (0, -50) from the current position
-			li		$a0,574
-			li		$a1,0
-			jal		horiz
-
-			li		$a0,-8
-			li		$a1,0
-			jal		vert
-
-			# Draw line (25, 12) from the curent position
-			li		$a0,599
+			li		$a0,522
 			li		$a1,1
 			jal		horiz
 
@@ -1220,8 +1088,95 @@ main:			# Move (5, 5) from the current position
 			lw		$t0,LEAVETRK	# "drop" the track
 			sw		$zero,0($t0)
 
-			# Draw line (-25, 12) from the curent position
-			li		$a0,574
+			# Draw line (0, 50) from the curent position
+			li		$a0,522
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,54
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (-25, 0) from the curent position
+			li		$a0,497
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,54
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (0, -50) from the curent position
+			li		$a0,497
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,4
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (20, 45) from the current position
+			li		$a0,517
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,49
+			li		$a1,0
+			jal		vert
+
+			# Draw line (10, 10) from the curent position
+			li		$a0,527
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,59
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (0, -55) from the current position
+			li		$a0,527
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,4
+			li		$a1,0
+			jal		vert
+
+			# Draw line (0, 50) from the curent position
+			li		$a0,527
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,54
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Move (0, -50) from the current position
+			li		$a0,527
+			li		$a1,0
+			jal		horiz
+
+			li		$a0,4
+			li		$a1,0
+			jal		vert
+
+			# Draw line (25, 12) from the curent position
+			li		$a0,552
 			li		$a1,1
 			jal		horiz
 
@@ -1232,12 +1187,24 @@ main:			# Move (5, 5) from the current position
 			lw		$t0,LEAVETRK	# "drop" the track
 			sw		$zero,0($t0)
 
-			# Draw line (25, 25) from the curent position
-			li		$a0,599
+			# Draw line (-25, 12) from the curent position
+			li		$a0,527
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,41
+			li		$a0,28
+			li		$a1,1
+			jal		vert
+
+			lw		$t0,LEAVETRK	# "drop" the track
+			sw		$zero,0($t0)
+
+			# Draw line (25, 25) from the curent position
+			li		$a0,552
+			li		$a1,1
+			jal		horiz
+
+			li		$a0,53
 			li		$a1,1
 			jal		vert
 
@@ -1245,29 +1212,29 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (5, -50) from the current position
-			li		$a0,604
+			li		$a0,557
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,-9
+			li		$a0,3
 			li		$a1,0
 			jal		vert
 
-			# Move (25, 8) from the current position
-			li		$a0,629
+			# Move (25, 9) from the current position
+			li		$a0,582
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,-1
+			li		$a0,12
 			li		$a1,0
 			jal		vert
 
 			# Draw line (-25, 8) from the curent position
-			li		$a0,604
+			li		$a0,557
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,7
+			li		$a0,20
 			li		$a1,1
 			jal		vert
 
@@ -1275,11 +1242,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (0, 8) from the curent position
-			li		$a0,604
+			li		$a0,557
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,15
+			li		$a0,28
 			li		$a1,1
 			jal		vert
 
@@ -1287,11 +1254,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (25, 8) from the curent position
-			li		$a0,629
+			li		$a0,582
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,23
+			li		$a0,36
 			li		$a1,1
 			jal		vert
 
@@ -1299,23 +1266,23 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (0, 8) from the curent position
-			li		$a0,629
+			li		$a0,582
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,31
+			li		$a0,44
 			li		$a1,1
 			jal		vert
 
 			lw		$t0,LEAVETRK	# "drop" the track
 			sw		$zero,0($t0)
 
-			# Draw line (-25, 8) from the curent position
-			li		$a0,604
+			# Draw line (-25, 9) from the curent position
+			li		$a0,557
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,39
+			li		$a0,53
 			li		$a1,1
 			jal		vert
 
@@ -1323,20 +1290,20 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (30, -50) from the current position
-			li		$a0,634
+			li		$a0,587
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,0
 			jal		vert
 
 			# Draw line (25, 0) from the curent position
-			li		$a0,659
+			li		$a0,612
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,1
 			jal		vert
 
@@ -1344,20 +1311,20 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (-12, 0) from the current position
-			li		$a0,647
+			li		$a0,600
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,0
 			jal		vert
 
 			# Draw line (0, 50) from the curent position
-			li		$a0,647
+			li		$a0,600
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,39
+			li		$a0,53
 			li		$a1,1
 			jal		vert
 
@@ -1365,20 +1332,20 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (17, -50) from the current position
-			li		$a0,664
+			li		$a0,617
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,0
 			jal		vert
 
 			# Draw line (0, 35) from the curent position
-			li		$a0,664
+			li		$a0,617
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,24
+			li		$a0,38
 			li		$a1,1
 			jal		vert
 
@@ -1386,11 +1353,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (6, 15) from the curent position
-			li		$a0,670
+			li		$a0,623
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,39
+			li		$a0,53
 			li		$a1,1
 			jal		vert
 
@@ -1398,11 +1365,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (12, 0) from the curent position
-			li		$a0,682
+			li		$a0,635
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,39
+			li		$a0,53
 			li		$a1,1
 			jal		vert
 
@@ -1410,11 +1377,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (6, -15) from the curent position
-			li		$a0,688
+			li		$a0,641
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,24
+			li		$a0,38
 			li		$a1,1
 			jal		vert
 
@@ -1422,11 +1389,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (0, -35) from the curent position
-			li		$a0,688
+			li		$a0,641
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,1
 			jal		vert
 
@@ -1434,20 +1401,20 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (5, 0) from the current position
-			li		$a0,693
+			li		$a0,646
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,0
 			jal		vert
 
 			# Draw line (12, 50) from the curent position
-			li		$a0,705
+			li		$a0,658
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,39
+			li		$a0,53
 			li		$a1,1
 			jal		vert
 
@@ -1455,11 +1422,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (12, -50) from the curent position
-			li		$a0,717
+			li		$a0,670
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,1
 			jal		vert
 
@@ -1467,20 +1434,20 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (5, 0) from the current position
-			li		$a0,722
+			li		$a0,675
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,0
 			jal		vert
 
 			# Draw line (12, 50) from the curent position
-			li		$a0,734
+			li		$a0,687
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,39
+			li		$a0,53
 			li		$a1,1
 			jal		vert
 
@@ -1488,11 +1455,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (12, -50) from the curent position
-			li		$a0,746
+			li		$a0,699
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,1
 			jal		vert
 
@@ -1500,11 +1467,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (12, 50) from the curent position
-			li		$a0,758
+			li		$a0,711
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,39
+			li		$a0,53
 			li		$a1,1
 			jal		vert
 
@@ -1512,11 +1479,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (12, -50) from the curent position
-			li		$a0,770
+			li		$a0,723
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,1
 			jal		vert
 
@@ -1524,20 +1491,20 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (5, 0) from the current position
-			li		$a0,775
+			li		$a0,728
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,0
 			jal		vert
 
 			# Draw line (25, 50) from the curent position
-			li		$a0,800
+			li		$a0,753
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,39
+			li		$a0,53
 			li		$a1,1
 			jal		vert
 
@@ -1545,20 +1512,20 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (-25, 0) from the current position
-			li		$a0,775
+			li		$a0,728
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,39
+			li		$a0,53
 			li		$a1,0
 			jal		vert
 
 			# Draw line (25, -50) from the curent position
-			li		$a0,800
+			li		$a0,753
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,1
 			jal		vert
 
@@ -1566,20 +1533,20 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (5, 0) from the current position
-			li		$a0,805
+			li		$a0,758
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,0
 			jal		vert
 
 			# Draw line (12, 25) from the curent position
-			li		$a0,817
+			li		$a0,770
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,14
+			li		$a0,28
 			li		$a1,1
 			jal		vert
 
@@ -1587,11 +1554,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (0, 25) from the curent position
-			li		$a0,817
+			li		$a0,770
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,39
+			li		$a0,53
 			li		$a1,1
 			jal		vert
 
@@ -1599,20 +1566,20 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (0, -25) from the current position
-			li		$a0,817
+			li		$a0,770
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,14
+			li		$a0,28
 			li		$a1,0
 			jal		vert
 
 			# Draw line (12, -25) from the curent position
-			li		$a0,829
+			li		$a0,782
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,1
 			jal		vert
 
@@ -1620,20 +1587,20 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (5, 0) from the current position
-			li		$a0,834
+			li		$a0,787
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,0
 			jal		vert
 
 			# Draw line (25, 0) from the curent position
-			li		$a0,859
+			li		$a0,812
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,1
 			jal		vert
 
@@ -1641,11 +1608,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (-25, 50) from the curent position
-			li		$a0,834
+			li		$a0,787
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,39
+			li		$a0,53
 			li		$a1,1
 			jal		vert
 
@@ -1653,11 +1620,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Draw line (25, 0) from the curent position
-			li		$a0,859
+			li		$a0,812
 			li		$a1,1
 			jal		horiz
 
-			li		$a0,39
+			li		$a0,53
 			li		$a1,1
 			jal		vert
 
@@ -1665,11 +1632,11 @@ main:			# Move (5, 5) from the current position
 			sw		$zero,0($t0)
 
 			# Move (5, -50) from the current position
-			li		$a0,864
+			li		$a0,817
 			li		$a1,0
 			jal		horiz
 
-			li		$a0,-11
+			li		$a0,3
 			li		$a1,0
 			jal		vert
 

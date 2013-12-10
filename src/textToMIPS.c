@@ -15,6 +15,7 @@
 
 #define		ROMAN_OFFSET	65
 #define		ARABIC_OFFSET	48
+#define		WINDOWDEFAULT	718
 #define		DEFAULT_OUT		"words.asm"
 
 int main(int argc, char *argv[]) {
