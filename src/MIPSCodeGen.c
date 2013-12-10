@@ -4,26 +4,6 @@
 
 #include "MIPSCodeGen.h"
 
-/*
-* lineCount(): returns the number of lines in a file.
-*/
-int lineCount (FILE *target) {
-	int numLines = 0, character = 0;
-
-	while((character = fgetc(target)) != EOF)
-		if (character == '\n')
-		    numLines++;
-
-	return numLines;
-}
-
-void fileCopy(FILE *source, FILE *target) {
-	int character;
-
-	while((character = fgetc(source)) != EOF)
-		fputc(character, target);
-}
-
 FILE* sourceIO (int argc, char *argv[]) {
 
 	FILE *source;
@@ -71,44 +51,6 @@ FILE* destIO (int argc, char *argv[]) {
 			exit(0);
 	}
 	return dest;
-}
-
-void getLibMethods(FILE* destination) {
-	int parsing = 0;
-	char* line;
-
-	FILE* source = fopen("MIPSCodeGen.h", "r");
-
-	while (!feof(source)) {
-		fgets(line, 256, source);
-		
-		if (strcmp("BEGIN LIB METHOD SEGMENT", line)) {
-			parsing = 1;
-		} else if (strcmp("BEGIN LIB METHOD SEGMENT", line)) {
-			return;
-		} else if (parsing) {
-			fputs(line, destination);
-		}
-	}
-}
-
-
-void getLibData(FILE* destination) {
-	int parsing = 0;
-	char* line;
-	FILE* source = fopen("MIPSCodeGen.h", "r");
-
-	while (!feof(source)) {
-		fgets(line, 256, source);
-		
-		if (strcmp("BEGIN LIB DATA SEGMENT", line)) {
-			parsing = 1;
-		} else if (strcmp("END LIB DATA SEGMENT", line)) {
-			return;
-		} else if (parsing) {
-			fputs(line, destination);
-		}
-	}
 }
 
 
